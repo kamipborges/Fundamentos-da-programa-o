@@ -1,0 +1,63 @@
+import java.util.Scanner;
+/**
+ * Criando um programa leia dois numeros e informe
+ * se o primeiro é divisivel pelo segundo. A ordem
+ * dos numero não precisa observar a regra. Isto é,
+ * o seu programa tratará disso para poder calcular
+ * o segundo numero é ou nao divisor do primeiro.
+ * 
+ * @author (Kamilla) 
+ * 
+ */
+public class Revisao3
+{
+    public static void main (String args[])
+    {
+        Scanner teclado = new Scanner (System.in);
+        double div1, div2;
+        int a, b; //numero1 e numero2
+        
+        System.out.println("\n Digite o valor do primeiro numero (a) : ");
+        a = teclado.nextInt();
+        System.out.println("\n Digite o valor do segundo numero (b) : ");
+        b = teclado.nextInt();
+        
+        if (a != b)
+        { 
+            if (a > b) 
+            
+            {
+                if (a % b == 0) { System.out.println("a é divisivel por b"); }
+            else { System.out.println("a não é divisivel por b");}
+        }
+                if (b > a)
+                { 
+                if (b % a == 0) { System.out.println("b é divisivel por a"); }
+                else { System.out.println("b não é divisivel por a"); }
+            }
+        }
+            
+            
+            
+            
+         
+    
+            else {// se  nao são diferentes são iguais
+            System.out.println("\n Os numeros são iguais!");     
+        }
+     
+    }
+      public static boolean divisivel (int a, int b){
+                  
+            if (a > b) {
+            if (a % b == 0) { return true; } 
+            else { return false; }
+        }
+             if  (b % a ==0 ) {return true; } 
+                 else { return false; }              
+                 
+
+        }
+        
+            
+        }
