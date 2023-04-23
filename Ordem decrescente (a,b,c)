@@ -1,0 +1,59 @@
+import java.util.Scanner;
+/**
+ * Criando um programa que receba 3 números, verifique
+* se são diferentes entre si e somente se a condição 
+* se verificar os escrever em ordem decrescente.
+ * 
+ * @author (Kamilla) 
+ * 
+ */
+public class Revisao1
+{
+    public static void decresente (double a, double b, double c)
+    {
+        Scanner teclado = new Scanner (System.in);
+        System.out.println("\n Digite o valor do primeiro número: ");
+        a = teclado.nextDouble(); 
+        
+        do { 
+            System.out.println("\n Digite o valor do segundo número: ");
+        b = teclado.nextDouble();
+    } while (b == a );
+    //Ler o a enquanto o b for a (repetir até que sejam diferentes)
+        
+    do {
+    System.out.println("\n Digite o valor do terceiro número: ");
+        c = teclado.nextDouble();
+    } while (c == a || c == b);
+        
+        if (a>b)
+        { 
+            if (a>c)  
+            {
+                if (b>c) //Pode ser uma vírgula ao inves dos \t ou \n
+                { System.out.println("Em ordem descrescente: \n"+a+ "\t " +b+ "\t " +c); }
+                    else { System.out.println("Em ordem descrescente: \n"+a+ "\t " +c+ "\t " +b);  }
+                            
+                
+                
+            }
+            
+          else { System.out.println("Em ordem descrescente: \n"+c+ "\t " +a+ "\t " +b);  } 
+        }
+        
+       
+               
+        
+     else { 
+         if (b>c)
+        { 
+            if (a>c)
+            { System.out.println("Em ordem descrescente: \n"+b+ "\t " +a+ "\t " +c);}
+            else {System.out.println("Em ordem descrescente: \n"+b+ "\t " +c+ "\t " +a);}
+        }
+        else {System.out.println("Em ordem descrescente: \n"+c+ "\t " +b+ "\t " +a); }
+        
+        
+    }
+    }
+}
