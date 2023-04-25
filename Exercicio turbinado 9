@@ -1,0 +1,37 @@
+/**
+ * Programa que escreve os 100 primeiros numeros primos
+ * 
+ * @author (Kamilla) 
+ * 
+ */
+public class TURB9
+{
+    
+           public static int quantDiv1 (int valor)
+    { int cont=0;//contador
+      int ante=1;//gerar os antecessores
+      
+      while (ante <= valor)
+      {
+        if (valor% ante ==0) cont++;//cont ++ >> cont=cont+1 sugnifica que valor e divisivel por ante
+        ante++;
+     }
+      return cont;
+    }
+    public static boolean primo (int valor) //Teste para ver se é primo
+        {
+            if ( quantDiv1 (valor) == 2)
+            {return true; }
+            else { return false; }
+        }
+        
+        public static void main (String args[])
+        {
+            int cont=0; //Começa com 0 os contadores
+            int num =0; // 
+            while (cont < 101) //MENOR QUE 101 = 100
+            { if ( primo(num) ) { cont++; System.out.println("Numero primo: " +num); }
+            num ++;
+        }
+    }
+}
