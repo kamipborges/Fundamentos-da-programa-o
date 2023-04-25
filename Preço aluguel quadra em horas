@@ -1,0 +1,65 @@
+import java.util.Scanner;
+/**
+ * Criando um programa que receca dois horarios:
+ * formados por hora e minuto relacionado ao fim da partida
+ * e imprima o valor a ser cobrado sabendo que o alugel de
+ * cada quasra custa 50 reais por hora ATE 2 HORAS.
+ * acima disso custa 20 reais a hora excedente
+ * EXERCICIO 4 LISTA DE REVISAO P1
+ * @author (Kamilla) 
+ * 
+ */
+public class Revisao5
+{
+    public static void main (String args[])
+    {
+        Scanner entrada = new Scanner (System.in);
+       int horasI, minI, horasF, minF;
+System.out.println("\fInforme a hora inicial: ");
+horasI = entrada.nextInt();
+System.out.println("\n Minutos inicial: ");
+minI = entrada.nextInt();
+
+System.out.println("\n Hora final: ");
+horasF = entrada.nextInt();
+System.out.println("\n Minutos final: ");
+minF = entrada.nextInt();
+
+//Converter para minutos
+//Multiplica as horas por 60
+int horasEmMin, horasEmMin2;
+horasEmMin = horasI * 60;
+horasEmMin2 = horasF * 60;
+//Total de minutos dos tempos inicial e final:
+int tempoInicial, tempoFinal;
+tempoInicial = minI + horasEmMin;
+tempoFinal = minF + horasEmMin2;
+//Duração da partida
+double duracao, duracaoH;
+duracao = tempoFinal - tempoInicial;
+duracaoH = duracao / 60;
+System.out.printf("\n A duração em horas foi de: %.2f horas. ", duracaoH);
+//Calculando o preço da locação
+double duracaoHoras;
+duracaoHoras = (int)Math.ceil(duracaoH);
+System.out.println("\n A duração em horas para o aluguel foi de: " +duracaoHoras+ " horas.");
+//Calculando o preço
+double preco, preco2;
+if (duracaoHoras <= 2)
+{ 
+    preco = duracaoHoras * 50;
+    System.out.printf("\n O preço foi de R$ %.2f reais", preco);
+}
+else{
+preco = 100 + ( 20 * (duracaoHoras -2)); 
+    System.out.printf("\n O preço  foi de R$ %.2f reais", preco);
+}
+
+
+
+
+
+        
+    
+}
+}
