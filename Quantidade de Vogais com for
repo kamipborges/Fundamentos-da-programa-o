@@ -1,0 +1,38 @@
+import java.util.Scanner;
+/**
+ * O programa receberá um texto de uma linha e 
+ * irá escrever a quantidade de vogais.
+ * COM O FOR
+ * @author (Kamilla) 
+ * @version (Maio)
+ */
+public class QuantidadeDeVogais1ComFor
+{
+    public static void main (String[]args)
+    {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("\n Digite uma texto de uma linhas: ");
+        String frase = entrada.nextLine().toLowerCase(); // escrever tudo em letra minuscula
+        int tamanho = frase.length();
+        
+        System.out.println("\n O texto tem : " +tamanho+ " caracteres, ou letras.");
+        //Agora para saber a posição de cada letra usamos charAt()
+        
+        int vogal=0; //Contador de vogais
+        int posicao=0; // posição de cada String
+        //Usaremos uma variavel auxiliar
+        // LETRA para verificar letra a letra
+        // letra é uma variavel char porque é só um
+        // caractere
+        for (posicao=0; posicao< tamanho; posicao++)
+        
+        {
+            char letra = frase.charAt(posicao); //guarda cada uma das letras de acordo com posiçao
+            if (letra == 'a'|| letra=='e' || letra=='i' || letra=='o' || letra=='u') {vogal++; }
+            
+        }
+        System.out.println("\n A frase " +frase+ " possui " +vogal+ " vogais.");
+        
+        
+    }
+    }
